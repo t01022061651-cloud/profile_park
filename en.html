@@ -269,11 +269,11 @@
         </a>
       </li>
       <li>
-        <a class="contact-item" href="mailto:hjpark72@skku.edu">
+        <a class="contact-item" id="emailLink" href="#">
           <div class="contact-icon">✉️</div>
           <div>
             <div class="contact-label">E-mail</div>
-            <div class="contact-value">hjpark72@skku.edu</div>
+            <div class="contact-value" id="emailText"></div>
           </div>
         </a>
       </li>
@@ -298,5 +298,12 @@
   </div>
 
 </div>
+<script>
+var u = 'hjpark72'; var d = 'skku.edu';
+var el = document.getElementById('emailText');
+var lk = document.getElementById('emailLink');
+if(el){ el.textContent = u + '@' + d; }
+if(lk){ lk.href = 'mailto:' + u + '@' + d; }
+</script>
 </body>
 </html>
