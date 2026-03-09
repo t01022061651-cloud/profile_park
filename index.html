@@ -309,11 +309,11 @@
         </a>
       </li>
       <li>
-        <a class="contact-item" href="/cdn-cgi/l/email-protection#31595b4150435a060371425a5a441f545544">
+        <a class="contact-item" id="emailLink" href="#">
           <div class="contact-icon">✉️</div>
           <div>
             <div class="contact-label">E-MAIL</div>
-            <div class="contact-value"><span class="__cf_email__" data-cfemail="2d45475d4c5f461a1f6d5e46465803484958">[email&#160;protected]</span></div>
+            <div class="contact-value" id="emailText"></div>
           </div>
         </a>
       </li>
@@ -340,7 +340,14 @@
 
 <div class="toast" id="toast">✓ 연락처가 저장됩니다</div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+
+var u = 'hjpark72'; var d = 'skku.edu';
+var el = document.getElementById('emailText');
+var lk = document.getElementById('emailLink');
+if(el){ el.textContent = u + '@' + d; }
+if(lk){ lk.href = 'mailto:' + u + '@' + d; }
+
 function saveContact() {
   const vcard = [
     "BEGIN:VCARD",
